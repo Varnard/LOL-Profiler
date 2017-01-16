@@ -1,5 +1,7 @@
 package sample.view;
 
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
@@ -14,6 +16,9 @@ public class ChampController {
 
     @FXML
     private TableView<Champion> table;
+
+    @FXML
+    private TableColumn<Champion, String> rankColumn;
 
     @FXML
     private TableColumn<Champion, String> nameColumn;
@@ -35,6 +40,8 @@ public class ChampController {
 
     @FXML
     private TableColumn<Champion, Number> csColumn;
+
+    int i;
 
     // Reference to the main application
     private Main main;
@@ -58,6 +65,12 @@ public class ChampController {
         deathsColumn.setCellValueFactory(cellData -> cellData.getValue().deathsProperty());
         assistsColumn.setCellValueFactory(cellData -> cellData.getValue().assistsProperty());
         csColumn.setCellValueFactory(cellData -> cellData.getValue().csProperty());
+        rankColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Champion, String>, ObservableValue<String>>() {
+            @Override public ObservableValue<String> call(TableColumn.CellDataFeatures<Champion, String> p) {
+                return new ReadOnlyObjectWrapper(table.getItems().indexOf(p.getValue())+1 + "");
+            }
+        });
+        rankColumn.setSortable(false);
 
         // ** The TableCell class has the method setTextFill(Paint p) that you
         // ** need to override the text color
