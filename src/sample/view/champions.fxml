@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.ChampController">
+   <center>
+      <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Rank" />
+          <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Champion" />
+            <TableColumn fx:id="scoreColumn" prefWidth="75.0" text="Score" />
+            <TableColumn fx:id="winrateColumn" prefWidth="75.0" text="W/L" />
+            <TableColumn fx:id="killsColumn" prefWidth="75.0" text="Kills" />
+            <TableColumn fx:id="deathsColumn" prefWidth="75.0" text="Deaths" />
+            <TableColumn fx:id="assistsColumn" prefWidth="75.0" text="Assists" />
+            <TableColumn fx:id="csColumn" prefWidth="75.0" text="CS" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
