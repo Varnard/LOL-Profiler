@@ -77,9 +77,9 @@ public class ChampController {
                         super.updateItem(item, empty);
                         if (!isEmpty()) {
                             if ((double) item > 5)
-                                setStyle("-fx-background-color: derive(red,95%)");
+                                setStyle("-fx-background-color: derive(rgba(255,0,0,0.2),90%)");
                             if ((double) item < 5)
-                                setStyle("-fx-background-color: derive(green,95%)");
+                                setStyle("-fx-background-color: derive(rgba(0,255,0,0.3),90%)");
 
                             this.setText(item.toString());
                         }
@@ -97,10 +97,10 @@ public class ChampController {
                         super.updateItem(item, empty);
                         if (!isEmpty()) {
                             if (item.getWinrate() < 0.50)
-                                setStyle("-fx-background-color: derive(red,90%)");
+                                setStyle("-fx-background-color: derive(rgba(255,0,0,0.2),90%)");
                             // Get fancy and change color based on data
                             if (item.getWinrate() > 0.50)
-                                setStyle("-fx-background-color: derive(green,90%)");
+                                setStyle("-fx-background-color: derive(rgba(0,255,0,0.3),90%)");
                             this.setText(item.toString());
                         }
 
@@ -121,14 +121,14 @@ public class ChampController {
                         if (!isEmpty()) {
                             if (item instanceof Double) {
                                 if ((double) item < value)
-                                    setStyle("-fx-background-color: derive(red,95%)");
+                                    setStyle("-fx-background-color: derive(rgba(255,0,0,0.2),90%)");
                                 if ((double) item > value)
-                                    setStyle("-fx-background-color: derive(green,95%)");
+                                    setStyle("-fx-background-color: derive(rgba(0,255,0,0.3),90%)");
                             } else if (item instanceof Integer) {
                                 if ((int) item < value)
-                                    setStyle("-fx-background-color: derive(red,95%)");
+                                    setStyle("-fx-background-color: derive(rgba(255,0,0,0.2),90%)");
                                 if ((int) item > value)
-                                    setStyle("-fx-background-color: derive(green,95%)");
+                                    setStyle("-fx-background-color: derive(rgba(0,255,0,0.3),90%)");
                             }
                             this.setText(item.toString());
                         }
