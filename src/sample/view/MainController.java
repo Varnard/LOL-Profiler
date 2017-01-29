@@ -19,9 +19,15 @@ public class MainController {
     @FXML
     private Tab positions;
 
+    @FXML
+    private Tab details;
+
     private ChampController champController;
 
     private PositionController positionController;
+
+    private DetailsController detailsController;
+
 
 
 
@@ -39,6 +45,7 @@ public class MainController {
         FXMLLoader loader = new FXMLLoader();
         champController.setMain(main);
         positionController.setMain(main);
+        detailsController.setMain(main);
     }
 
     @FXML
@@ -57,6 +64,13 @@ public class MainController {
             BorderPane positions = (BorderPane) loader.load();
             this.positions.setContent(positions);
             positionController = loader.getController();
+
+            loader = new FXMLLoader();
+            loader.setLocation(Main.class
+                    .getResource("view/details.fxml"));
+            BorderPane details = (BorderPane) loader.load();
+            this.details.setContent(details);
+            detailsController = loader.getController();
 
         } catch (IOException e) {
             e.printStackTrace();
