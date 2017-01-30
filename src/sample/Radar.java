@@ -11,6 +11,8 @@ import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.ui.RectangleEdge;
 import sample.model.RadarData;
 
+import java.awt.*;
+
 /**
  * Created by Varn on 2017-01-30.
  */
@@ -53,6 +55,8 @@ public class Radar {
         LegendTitle legendtitle = new LegendTitle(spiderwebplot);
         legendtitle.setPosition(RectangleEdge.BOTTOM);
         jfreechart.addSubtitle(legendtitle);
+        spiderwebplot.setSeriesPaint(0,new Color(100,100,100,160));
+        spiderwebplot.setSeriesPaint(1,new Color(0,20,240,160));
         return jfreechart;
     }
 

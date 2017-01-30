@@ -66,25 +66,25 @@
                                       <Label onMouseClicked="#showAssists" prefHeight="34.0" prefWidth="195.0" text="Assists" GridPane.rowIndex="4" />
                                       <Label fx:id="avgAssists" onMouseClicked="#showAssists" prefHeight="50.0" prefWidth="133.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                       <Label fx:id="playerAssists" onMouseClicked="#showAssists" prefHeight="50.0" prefWidth="127.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                                      <Label prefHeight="50.0" prefWidth="122.0" text="Damage Dealt" GridPane.rowIndex="5" />
-                                      <Label fx:id="avgDamageDealt" prefHeight="50.0" prefWidth="163.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                      <Label fx:id="playerDamageDealt" prefHeight="50.0" prefWidth="153.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                                      <Label prefHeight="49.0" prefWidth="118.0" text="Damage Taken" GridPane.rowIndex="6">
+                                      <Label onMouseClicked="#showDamageDealt" prefHeight="50.0" prefWidth="122.0" text="Damage Dealt" GridPane.rowIndex="5" />
+                                      <Label fx:id="avgDamageDealt" onMouseClicked="#showDamageDealt" prefHeight="50.0" prefWidth="163.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                      <Label fx:id="playerDamageDealt" onMouseClicked="#showDamageDealt" prefHeight="50.0" prefWidth="153.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                      <Label onMouseClicked="#showDamageTaken" prefHeight="34.0" prefWidth="182.0" text="Damage Taken" GridPane.rowIndex="6">
                                  <GridPane.margin>
                                     <Insets />
                                  </GridPane.margin>
                               </Label>
-                                      <Label fx:id="avgDamageTaken" prefHeight="49.0" prefWidth="148.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                                      <Label fx:id="playerDamageTaken" prefHeight="49.0" prefWidth="191.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                                      <Label prefHeight="49.0" prefWidth="127.0" text="CS" GridPane.rowIndex="8" />
-                                      <Label fx:id="avgCreepScore" prefHeight="49.0" prefWidth="155.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                                      <Label fx:id="playerCreepScore" prefHeight="116.0" prefWidth="135.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                      <Label fx:id="avgDamageTaken" onMouseClicked="#showDamageTaken" prefHeight="49.0" prefWidth="148.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                      <Label fx:id="playerDamageTaken" onMouseClicked="#showDamageTaken" prefHeight="49.0" prefWidth="191.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                      <Label onMouseClicked="#showCreepScore" prefHeight="49.0" prefWidth="127.0" text="CS" GridPane.rowIndex="8" />
+                                      <Label fx:id="avgCreepScore" onMouseClicked="#showCreepScore" prefHeight="49.0" prefWidth="155.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                      <Label fx:id="playerCreepScore" onMouseClicked="#showCreepScore" prefHeight="116.0" prefWidth="135.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="8" />
                               <Label text="Type:" />
                               <Label text="Average:" GridPane.columnIndex="1" />
                               <Label text="Player:" GridPane.columnIndex="2" />
-                              <Label prefHeight="85.0" prefWidth="253.0" text="Gold Earned" GridPane.rowIndex="7" />
-                              <Label fx:id="avgGoldEarned" prefHeight="101.0" prefWidth="233.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                              <Label fx:id="playerGoldEarned" prefHeight="69.0" prefWidth="228.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <Label onMouseClicked="#showGoldEarned" prefHeight="85.0" prefWidth="253.0" text="Gold Earned" GridPane.rowIndex="7" />
+                              <Label fx:id="avgGoldEarned" onMouseClicked="#showGoldEarned" prefHeight="101.0" prefWidth="233.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Label fx:id="playerGoldEarned" onMouseClicked="#showGoldEarned" prefHeight="69.0" prefWidth="228.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                                   </children>
                            <padding>
                               <Insets left="10.0" />
@@ -110,7 +110,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <AreaChart fx:id="areaChart">
+                  <AreaChart fx:id="areaChart" stylesheets="@gdareachart.css">
                     <xAxis>
                       <CategoryAxis side="BOTTOM" />
                     </xAxis>

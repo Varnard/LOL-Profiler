@@ -1,0 +1,9 @@
+
+.default-color0.chart-area-symbol { -fx-background-color: rgba(50,150,50,1) }
+.default-color1.chart-area-symbol { -fx-background-color: rgba(150,50,50,1) }
+
+.default-color0.chart-series-area-line { -fx-stroke:  rgba(50,150,50,1); }
+.default-color1.chart-series-area-line { -fx-stroke:  rgba(150,50,50,1); }
+
+.default-color0.chart-series-area-fill { -fx-fill:  rgba(50,150,50,0.15)}
+.default-color1.chart-series-area-fill { -fx-fill:  rgba(150,50,50,0.15)}

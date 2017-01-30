@@ -29,6 +29,7 @@ public class WinrateController implements ChartController {
     public void setData(Dataset playerData, Dataset averageData) {
         Winrate wr = playerData.getWinrate();
         chart.setLegendVisible(false);
+        chart.setTitle("Winrate");
         chart.setData(wr.toPieChartData());
         wins.setText(String.valueOf(wr.getWins()));
         loses.setText(String.valueOf(wr.getLoses()));

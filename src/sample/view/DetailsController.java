@@ -171,7 +171,6 @@ public class DetailsController {
         seriesMinus.getData().add(new XYChart.Data("28", -0));
 
         areaChart.getData().addAll(seriesPlus, seriesMinus);
-
     }
 
     @FXML
@@ -194,10 +193,32 @@ public class DetailsController {
     public void showDeaths(){
         changeLayout("deaths");
     }
+
     @FXML
     public void showAssists(){
         changeLayout("assists");
     }
+
+    @FXML
+    public void showDamageDealt(){
+        changeLayout("damageDealt");
+    }
+
+    @FXML
+    public void showDamageTaken(){
+        changeLayout("damageTaken");
+    }
+
+    @FXML
+    public void showGoldEarned(){
+        changeLayout("goldEarned");
+    }
+
+    @FXML
+    public void showCreepScore(){
+        changeLayout("creepScore");
+    }
+
 
 
     private void changeLayout(String layout) {
